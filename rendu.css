@@ -1,0 +1,312 @@
+@import url(rendu_grid.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navbarre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 25px;
+    padding-right: 30px;
+}
+
+.logo_iim {
+    margin-left: 30px;
+    animation: 10s infinite linear tourne;
+}
+
+
+@keyframes tourne {
+    0% {
+        transform: rotate(0deg);
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+    gap: 60px;
+    padding-right: 30px;
+    font-size: 25px;
+    list-style: none;
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+}
+
+
+.home {
+    transition: 1s;
+    padding: 10px;
+    border: solid 1px black;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    animation: apparition 0.8s ease-out;
+}
+
+.home:hover {
+    background-color: orange;
+    box-shadow: 2px 2px 5px #fc894d;
+    color: black;
+}
+
+
+.programmes {
+    transition: 1s;
+    padding: 10px;
+    border: solid 1px black;
+    font-weight: bold;
+    animation: apparition 0.8s ease-out;
+}
+
+.programmes:hover {
+    background-color: orange;
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+.blog {
+    transition: 1s;
+    padding: 10px;
+    border: solid 1px black;
+    font-weight: bold;
+    animation: apparition 0.8s ease-out;
+}
+
+.blog:hover {
+    background-color: orange;
+    border: solid 1px black;
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+.contact {
+    transition: 1s;
+    padding: 10px;
+    border: solid 1px black;
+    font-weight: bold;
+    animation: apparition 0.8s ease-out;
+}
+
+.contact:hover {
+    background-color: orange;
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
+
+.presentation {
+    background-color: rgb(88, 87, 86);
+    display: flex;
+    height: 300px;
+    margin-top: 200px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.texte_presentation {
+    display: flex;
+    ;
+    justify-content: center;
+    padding-top: 30px;
+    font-size: 24px;
+}
+
+.text_deux {
+    width: 300px;
+    background-color: rgb(88, 87, 86);
+    height: 200px;
+    padding: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 1s;
+    margin-top: 300px;
+}
+
+.text_deux p {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 24px;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.text_deux:hover {
+    width: 100%;
+}
+
+.text_deux:hover p {
+    opacity: 1;
+}
+
+.photo_ecole {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    animation: apparition 0.8s ease-out;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.premier_titre {
+    display: flex;
+    justify-content: end;
+    color: white;
+}
+
+
+.premier_projet {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: rgb(88, 87, 86);
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.image_decor {
+    position: absolute;
+    width: 50%;
+    padding-top: 50px;
+    margin-left: 50px;
+    opacity: 1;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.image_decor:hover {
+    opacity: 0;
+}
+
+
+.text_3D {
+    padding-left: 1000px;
+    font-size: 24px;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+.transition_cachée {
+    font-size: 48px;
+    padding-left: 280px;
+    margin-bottom: 100px;
+}
+
+.deuxieme_projet {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: rgb(88, 87, 86);
+    margin-top: 90px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+ 
+@media screen and (max-width: 800px) {
+    
+    .navbarre {
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0%;
+    }
+
+    .logo_iim {
+        margin: 0%;
+        padding-bottom: 30px;
+    }
+
+    .photo_ecole {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+
+    .text_deux {
+        height: 300px;
+    }
+
+    .premier_projet {
+       padding-left: 25px;
+       width: 70%;
+       margin-left: 100px;
+    }
+
+    .image_decor {
+        height: 600px;
+        width: 600px;
+        margin-left: 20px;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+
+    .text_3D {
+        margin: 50px;
+        padding-left: 0%;
+    }
+
+    .transition_cachée {
+        display: none;
+    }
+
+    .deuxieme_projet {
+        padding-left: 25px;
+        width: 70%;
+        margin-left: 100px;
+    }
+
+    .presentation {
+        display: none;
+    }
+
+    .premier_h2 {
+        font-size: 20px;
+    }
+
+    .deuxieme_h2 {
+        font-size: 20px;
+    }
+
+    .troisieme_h2 {
+        font-size: 20px;
+    }
+}
+
+
+

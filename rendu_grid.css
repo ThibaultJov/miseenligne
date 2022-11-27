@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.déco_int {
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text_archi {
+    display: grid;
+    padding-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.premier_h2:hover {
+    background-color: rgb(88, 87, 86);
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+}
+
+.deuxieme_h2:hover {
+    background-color: rgb(88, 87, 86);
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+}
+
+.troisieme_h2:hover {
+    background-color: rgb(88, 87, 86);
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    .déco_int {
+        height: auto;
+        width: 100%;
+        margin-left: 20px;
+    }
+}
